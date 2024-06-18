@@ -1,1 +1,1 @@
-document.querySelector(".h1").textContent = "Rahul Nuthalapati";
+document.getElementById("content").textContent = ""
