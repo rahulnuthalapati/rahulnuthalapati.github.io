@@ -6,6 +6,11 @@ body {
     font-family: poppins;
 }
 
+.content {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
 .navbar {
     background-color: black;
     position:sticky;
@@ -37,4 +42,27 @@ body {
 
 .navbar a:hover {
     color: grey;
+}
+
+h4 {
+    font-weight: 600;
+    display:inline;
+}
+
+footer {
+    color:dimgrey;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 1%;
+    font-size: 15px;
+}
+
+hr {
+    width: 80%;
+    margin: auto;
+}
+
+h3 {
+    line-height: 0.2px;
 }
