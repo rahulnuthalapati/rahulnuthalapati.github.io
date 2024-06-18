@@ -15,3 +15,14 @@ window.onscroll = function() {
     }
 };
 
+document.getElementById("menu").addEventListener("click", function() {
+    this.textContent = "+";
+    event.stopPropagation();
+});
+
+document.addEventListener('click', function() {
+    var menuButton = document.getElementById('menu');
+    if (menuButton.textContent === '+') {
+        menuButton.textContent = '=';
+    }
+});

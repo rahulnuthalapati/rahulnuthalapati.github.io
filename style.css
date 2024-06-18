@@ -63,3 +63,39 @@ hr {
 h3 {
     line-height: 0.2px;
 }
+
+#menu {
+    display: none;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 660px) {
+    .links {
+        display: none;
+    }
+    .links.active {
+        display: flex;
+    }
+    #menu {
+        font-size: 30px;
+        font-weight: 620;
+        background: none;
+        border: none;
+        display: flex;
+        display: inline-block;
+        align-items: center;
+        z-index: 1;
+    }
+
+    #menu:hover {
+        cursor: pointer;
+    }
+}
+
+.show {
+    display: block;
+}
