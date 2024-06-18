@@ -12,9 +12,7 @@ body {
 }
 
 .navbar {
-    background-color: black;
-    position:sticky;
-    top: 0;
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,14 +23,13 @@ body {
 .navbar h1{
     font-size: 30px;
     font-weight: 620;
-    color: white;
     display: inline;
     padding-right: auto;
     line-height: 0.5;
 }
 
 .navbar a{
-    color: white;
+    color: black;
     font-weight: 420;
     display: inline-block;
     padding: 5px;
