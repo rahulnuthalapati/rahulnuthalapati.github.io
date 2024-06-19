@@ -1,4 +1,5 @@
 let navbar = document.getElementById("navbar");
+let navbarHeight = navbar.offsetHeight;
 window.onscroll = function() {
     if (window.scrollY > navbar.offsetHeight) {
         navbar.style.backgroundColor = "rgba(256, 256, 256, 0.95)";
@@ -15,14 +16,17 @@ window.onscroll = function() {
     }
 };
 
-document.getElementById("menu").addEventListener("click", function() {
-    this.textContent = "+";
-    event.stopPropagation();
-});
+document.getElementById("menu").addEventListener("click", function(event) {
+    if (this.textContent === '+') {
+        this.textContent = '×';
+        document.getElementById("menu-overlay").style.display = "block";
+        document.getElementById("menu-overlay").style.marginTop = navbarHeight + "px";
+        window.onscroll = function () { window.scrollTo(0, 0); };
 
-document.addEventListener('click', function() {
-    var menuButton = document.getElementById('menu');
-    if (menuButton.textContent === '+') {
-        menuButton.textContent = '=';
+    } else {
+        this.textContent = '+';
+        document.getElementById("menu-overlay").style.display = "none";
+        window.onscroll = function(){};
     }
+    event.stopPropagation();
 });
